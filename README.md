@@ -12,7 +12,7 @@
 
 *Developed for Amazon ML Challenge 2025*
 
-> **📢 DATASET NOTICE**: This project uses the **official dataset provided by Amazon** for the Amazon ML Challenge 2024. All product data, images, and pricing information are proprietary to Amazon.com, Inc. and are used exclusively for educational and competition purposes. The dataset is NOT included in this repository due to licensing restrictions and file size limitations.
+> **📢 DATASET NOTICE**: This project uses the **official dataset provided by Amazon** for the Amazon ML Challenge 2025. All product data, images, and pricing information are proprietary to Amazon.com, Inc. and are used exclusively for educational and competition purposes. The dataset is NOT included in this repository due to licensing restrictions and file size limitations.
 
 [Features](#-key-features) • [Architecture](#-system-architecture) • [Installation](#-installation) • [Usage](#-usage) • [Results](#-performance-metrics) • [Documentation](#-documentation)
 
@@ -670,3 +670,4 @@ This project was inspired by the need for more accurate and intelligent pricing 
 **Made with ❤️ for the Amazon ML Challenge 2025**
 
 </div>
+
