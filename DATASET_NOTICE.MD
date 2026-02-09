@@ -142,18 +142,6 @@ The methodology and code can be applied to many similar problems with appropriat
 
 ---
 
-## 📅 LAST UPDATED
-February 2025
-
-## 📄 VERSION
-1.0
-
----
-
 <div align="center">
-
-**⚠️ REMEMBER: Respect intellectual property. Code is open, data is not. ⚠️**
-
-*This notice must be retained in all copies or substantial portions of the project.*
 
 </div>
