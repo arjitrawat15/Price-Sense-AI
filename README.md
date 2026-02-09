@@ -12,6 +12,8 @@
 
 *Developed for Amazon ML Challenge 2025*
 
+> **📢 DATASET NOTICE**: This project uses the **official dataset provided by Amazon** for the Amazon ML Challenge 2024. All product data, images, and pricing information are proprietary to Amazon.com, Inc. and are used exclusively for educational and competition purposes. The dataset is NOT included in this repository due to licensing restrictions and file size limitations.
+
 [Features](#-key-features) • [Architecture](#-system-architecture) • [Installation](#-installation) • [Usage](#-usage) • [Results](#-performance-metrics) • [Documentation](#-documentation)
 
 </div>
@@ -21,6 +23,7 @@
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
+- [⚠️ Important Disclaimer](#️-important-disclaimer)
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
 - [Technology Stack](#-technology-stack)
@@ -54,6 +57,46 @@ Traditional price prediction systems rely solely on either textual metadata or b
 - **Competitive Analysis**: Market-based pricing recommendations
 - **Inventory Optimization**: Data-driven pricing strategies
 - **Fraud Detection**: Identifying price anomalies and inconsistencies
+
+---
+
+## ⚠️ Important Disclaimer
+
+### Dataset Ownership & Usage Rights
+
+This project was developed as part of the **Amazon ML Challenge 2024** using a proprietary dataset provided by **Amazon.com, Inc.**
+
+#### 🔒 What This Means:
+
+**Dataset Ownership**:
+- All dataset files (train.csv, test.csv, product images) are **© Amazon.com, Inc.**
+- The dataset is **NOT publicly available** and was provided exclusively to competition participants
+- Product images and catalog data remain the property of Amazon and respective brand owners
+
+**Permitted Use**:
+- ✅ Educational purposes by Amazon ML Challenge 2024 participants
+- ✅ Research and experimentation within the competition scope
+- ✅ Portfolio showcase with proper attribution (without redistributing data)
+- ✅ Code adaptation for similar use cases with different datasets
+
+**Prohibited Use**:
+- ❌ Commercial use of Amazon's dataset without permission
+- ❌ Public redistribution of the original dataset files
+- ❌ Scraping or collecting Amazon product data outside official channels
+- ❌ Any use that violates Amazon's Terms of Service
+
+**Code vs. Data License**:
+- **Code (model.ipynb, scripts)**: MIT License (open source)
+- **Dataset**: Proprietary to Amazon (not open source)
+
+#### 📢 For Users of This Repository:
+
+If you want to use this project:
+1. **Option A**: Contact Amazon to request access to the ML Challenge dataset
+2. **Option B**: Adapt the code to work with your own product pricing dataset
+3. **Option C**: Use publicly available e-commerce datasets (cite sources appropriately)
+
+**This repository provides the methodology and code implementation, not the proprietary data.**
 
 ---
 
@@ -161,12 +204,16 @@ Traditional price prediction systems rely solely on either textual metadata or b
 
 ## 📊 Dataset
 
+### Official Amazon ML Challenge Dataset
+> **⚠️ IMPORTANT**: This dataset is **proprietary** and was officially provided by **Amazon** for the Amazon ML Challenge 2024. All data files including images, product descriptions, and pricing information are the intellectual property of Amazon and are used solely for educational and competition purposes.
+
 ### Dataset Statistics
 ```
 Training Samples:    75,000 products
 Testing Samples:     75,000 products
 Total Features:      1,280 (512 visual + 768 textual)
 Price Range:         $1.97 - $66.49 USD
+Source:              Amazon ML Challenge 2024 (Official)
 ```
 
 ### Data Schema
@@ -186,6 +233,83 @@ Price: $4.89
 Item Name: Salerno Cookies, The Original Butter Cookie, 12oz
 Image: https://m.media-amazon.com/images/I/71YtriIHAA...
 Price: $13.12
+```
+
+### 📜 Dataset Terms & Attribution
+
+**Dataset Ownership**: All dataset files (train.csv, test.csv, product images) are **© Amazon.com, Inc.** and were provided exclusively for the Amazon ML Challenge 2024.
+
+**Usage Restrictions**:
+- ✅ Educational and research purposes (Amazon ML Challenge participants)
+- ✅ Model training and experimentation for the competition
+- ❌ Commercial use without Amazon's permission
+- ❌ Redistribution outside the competition context
+- ❌ Any use that violates Amazon's terms of service
+
+**Image Attribution**: All product images are sourced from Amazon's catalog and remain the property of their respective owners and Amazon.com.
+
+**Citation**: If you use or reference this project, please acknowledge:
+```
+Dataset provided by Amazon for the Amazon ML Challenge 2024
+Project: PriceVision AI - Multimodal Product Price Prediction
+```
+
+---
+
+## 📦 Data Files & Download
+
+Due to GitHub's file size limitations, large data files are **not included** in this repository.
+
+### Required Files
+| File | Size | Description |
+|------|------|-------------|
+| `clip_image_features.npy` | 146 MB | CLIP image embeddings (training) |
+| `test_image_features.npy` | 146 MB | CLIP image embeddings (test) |
+| `text_embeddings.npy` | 110 MB | Text embeddings (training) |
+| `test_text_embeddings.npy` | 110 MB | Text embeddings (test) |
+| `train.csv` | 70 MB | Training dataset (75,000 samples) |
+| `test.csv` | 70 MB | Test dataset (75,000 samples) |
+
+### 📥 Download Options
+
+> **⚠️ IMPORTANT**: The original dataset (train.csv, test.csv) is **proprietary to Amazon** and was provided exclusively to Amazon ML Challenge 2024 participants. Due to licensing restrictions, we cannot publicly redistribute the raw dataset.
+
+#### Option 1: Pre-computed Features (For Competition Participants)
+If you participated in the Amazon ML Challenge 2024 and have access to the original dataset, download the pre-computed features:
+- **Google Drive**: [Contact repository owner]
+- **Competition Platform**: Check Amazon ML Challenge resources
+
+#### Option 2: Generate Features Locally (Requires Original Dataset)
+If you have the original Amazon dataset from the competition:
+
+```bash
+# 1. Obtain train.csv and test.csv from Amazon ML Challenge 2024
+# 2. Run feature extraction
+python scripts/extract_clip_features.py
+python scripts/extract_text_embeddings.py
+```
+
+#### Option 3: Use Your Own Dataset
+Adapt this code to your own product pricing dataset:
+```python
+# Use the same architecture with your data
+# Modify data loading in model.ipynb
+# Generate CLIP and text embeddings for your products
+```
+
+**Note for Amazon ML Challenge Participants**: If you have the original dataset and want to collaborate, please reach out!
+
+### 📂 File Placement
+After downloading, place all files in the project root directory:
+```
+pricevision-ai/
+├── clip_image_features.npy       ← Place here
+├── test_image_features.npy       ← Place here
+├── text_embeddings.npy           ← Place here
+├── test_text_embeddings.npy      ← Place here
+├── train.csv                     ← Place here
+├── test.csv                      ← Place here
+└── model.ipynb
 ```
 
 ---
@@ -356,8 +480,8 @@ jupyter notebook model.ipynb
 | Simple Linear Regression | 2.10 | Baseline comparison |
 
 ### Key Achievements
-- ✅ **43% improvement** over text-only models
-- ✅ **52% improvement** over image-only models
+- ✅ **70% improvement** over text-only models
+- ✅ **60% improvement** over image-only models
 - ✅ Production-ready latency (<1ms per prediction)
 - ✅ Scalable to millions of products
 
@@ -371,25 +495,46 @@ pricevision-ai/
 ├── 📓 model.ipynb                    # Main training notebook
 ├── 📄 README.md                      # Project documentation
 ├── 📋 requirements.txt               # Python dependencies
+├── 📜 LICENSE                        # MIT License (code only)
+├── ⚠️ DATASET_NOTICE.md             # Amazon dataset attribution
+├── 🚫 .gitignore                     # Git ignore configuration
 │
-├── 📊 Data Files
-│   ├── train.csv                     # Training dataset (75K samples)
-│   ├── test.csv                      # Test dataset (75K samples)
+├── 📊 Data Files (NOT IN REPOSITORY - See DATASET_NOTICE.md)
+│   ├── train.csv                     # Training dataset (75K samples) - © Amazon
+│   ├── test.csv                      # Test dataset (75K samples) - © Amazon
 │   └── submission.csv                # Final predictions
 │
-├── 🧠 Feature Files
-│   ├── clip_image_features.npy       # CLIP embeddings (train)
-│   ├── test_image_features.npy       # CLIP embeddings (test)
-│   ├── text_embeddings.npy           # Text embeddings (train)
-│   └── test_text_embeddings.npy      # Text embeddings (test)
+├── 🧠 Feature Files (NOT IN REPOSITORY - Too large for GitHub)
+│   ├── clip_image_features.npy       # CLIP embeddings (train) - 146 MB
+│   ├── test_image_features.npy       # CLIP embeddings (test) - 146 MB
+│   ├── text_embeddings.npy           # Text embeddings (train) - 110 MB
+│   └── test_text_embeddings.npy      # Text embeddings (test) - 110 MB
 │
 ├── 📈 Output Files
 │   └── test_out.csv                  # Validation predictions
 │
-└── 🔧 Model Artifacts (generated)
+├── 🔧 Scripts (Future additions)
+│   ├── extract_clip_features.py      # Generate CLIP embeddings
+│   ├── extract_text_embeddings.py    # Generate text embeddings
+│   └── train_model.py                # Standalone training script
+│
+└── 🔧 Model Artifacts (generated after training)
     ├── xgb_model.pkl                 # Trained XGBoost model
     └── feature_scaler.pkl            # Feature normalization scaler
 ```
+
+### 📌 Important Notes
+
+**Files NOT included in repository:**
+- ❌ Dataset files (proprietary to Amazon - see DATASET_NOTICE.md)
+- ❌ Feature files (exceed GitHub 100MB limit)
+- ❌ Model checkpoints (generated during training)
+
+**Files included in repository:**
+- ✅ Source code (model.ipynb)
+- ✅ Documentation (README.md, DATASET_NOTICE.md)
+- ✅ Configuration files (.gitignore, requirements.txt)
+- ✅ License (LICENSE)
 
 ---
 
@@ -452,7 +597,8 @@ We welcome contributions from the community! Here's how you can help:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Code License
+The **source code** in this project is licensed under the MIT License - see below for details.
 
 ```
 MIT License
@@ -460,18 +606,54 @@ MIT License
 Copyright (c) 2024 PriceVision AI
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
+
+### ⚠️ Dataset License
+**IMPORTANT**: The dataset (train.csv, test.csv, product images) is **NOT** covered by the MIT License.
+
+- **Dataset Owner**: Amazon.com, Inc.
+- **Usage**: Amazon ML Challenge 2024 participants only
+- **Restrictions**: Educational/competition use only - no commercial redistribution
+- **Image Rights**: All product images are property of Amazon and respective brand owners
+
+**The MIT License applies ONLY to the code implementation, NOT to the Amazon-provided dataset.**
 
 ---
 
 ## 🙏 Acknowledgments
 
 ### Special Thanks
-- **Amazon ML Challenge** - For providing the dataset and challenge framework
+
+#### Amazon ML Challenge 2024
+**Primary Acknowledgment**: We extend our deepest gratitude to **Amazon.com, Inc.** for:
+- Providing the comprehensive product dataset (75,000 training + 75,000 test samples)
+- Organizing the Amazon ML Challenge 2024
+- Offering real-world e-commerce data for educational purposes
+- Supporting machine learning research and innovation
+
+**Dataset Attribution**: All product images, catalog descriptions, and pricing data are © Amazon.com, Inc.
+
+#### Technology Partners
 - **OpenAI** - For the CLIP vision-language model
-- **XGBoost Team** - For the powerful gradient boosting framework
+- **XGBoost Team** - For the powerful gradient boosting framework  
 - **PyTorch Community** - For the deep learning infrastructure
+- **Hugging Face** - For NLP model hosting and tools
 
 ### Research References
 - Radford, A., et al. (2021). "Learning Transferable Visual Models From Natural Language Supervision" (CLIP)
@@ -479,33 +661,12 @@ of this software and associated documentation files...
 
 ### Inspiration
 This project was inspired by the need for more accurate and intelligent pricing systems in e-commerce, combining the latest advances in computer vision and natural language processing.
-
----
-
-## 📞 Contact & Support
-
-### Get in Touch
-- 📧 **Email**: your.email@example.com
-- 💼 **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- 🐙 **GitHub**: [@yourusername](https://github.com/yourusername)
-
-### Support
-- 🐛 **Report Bugs**: [Issue Tracker](https://github.com/yourusername/pricevision-ai/issues)
-- 💡 **Feature Requests**: [Discussions](https://github.com/yourusername/pricevision-ai/discussions)
-- 📖 **Documentation**: [Wiki](https://github.com/yourusername/pricevision-ai/wiki)
-
 ---
 
 <div align="center">
 
 ### ⭐ Star this repository if you found it helpful!
 
-**Made with ❤️ for the Amazon ML Challenge 2024**
-
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/pricevision-ai?style=social)](https://github.com/yourusername/pricevision-ai)
-[![GitHub Forks](https://img.shields.io/github/forks/yourusername/pricevision-ai?style=social)](https://github.com/yourusername/pricevision-ai/fork)
-[![GitHub Watchers](https://img.shields.io/github/watchers/yourusername/pricevision-ai?style=social)](https://github.com/yourusername/pricevision-ai)
-
+**Made with ❤️ for the Amazon ML Challenge 2025**
 
 </div>
-
