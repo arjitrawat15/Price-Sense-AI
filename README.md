@@ -596,34 +596,6 @@ We welcome contributions from the community! Here's how you can help:
 
 ---
 
-## 📄 License
-
-### Code License
-The **source code** in this project is licensed under the MIT License - see below for details.
-
-```
-MIT License
-
-Copyright (c) 2024 PriceVision AI
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
 
 ### ⚠️ Dataset License
 **IMPORTANT**: The dataset (train.csv, test.csv, product images) is **NOT** covered by the MIT License.
@@ -641,10 +613,10 @@ SOFTWARE.
 
 ### Special Thanks
 
-#### Amazon ML Challenge 2024
+#### Amazon ML Challenge 2025
 **Primary Acknowledgment**: We extend our deepest gratitude to **Amazon.com, Inc.** for:
 - Providing the comprehensive product dataset (75,000 training + 75,000 test samples)
-- Organizing the Amazon ML Challenge 2024
+- Organizing the Amazon ML Challenge 2025
 - Offering real-world e-commerce data for educational purposes
 - Supporting machine learning research and innovation
 
@@ -671,6 +643,7 @@ This project was inspired by the need for more accurate and intelligent pricing 
 **Made with ❤️ for the Amazon ML Challenge 2025**
 
 </div>
+
 
 
 
