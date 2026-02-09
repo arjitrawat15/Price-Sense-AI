@@ -64,7 +64,7 @@ Traditional price prediction systems rely solely on either textual metadata or b
 
 ### Dataset Ownership & Usage Rights
 
-This project was developed as part of the **Amazon ML Challenge 2024** using a proprietary dataset provided by **Amazon.com, Inc.**
+This project was developed as part of the **Amazon ML Challenge 2025** using a proprietary dataset provided by **Amazon.com, Inc.**
 
 #### 🔒 What This Means:
 
@@ -74,7 +74,7 @@ This project was developed as part of the **Amazon ML Challenge 2024** using a p
 - Product images and catalog data remain the property of Amazon and respective brand owners
 
 **Permitted Use**:
-- ✅ Educational purposes by Amazon ML Challenge 2024 participants
+- ✅ Educational purposes by Amazon ML Challenge 2025 participants
 - ✅ Research and experimentation within the competition scope
 - ✅ Portfolio showcase with proper attribution (without redistributing data)
 - ✅ Code adaptation for similar use cases with different datasets
@@ -670,4 +670,5 @@ This project was inspired by the need for more accurate and intelligent pricing 
 **Made with ❤️ for the Amazon ML Challenge 2025**
 
 </div>
+
 
