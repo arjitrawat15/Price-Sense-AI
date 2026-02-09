@@ -4,7 +4,7 @@
 **Amazon.com, Inc.**
 
 ## Competition
-**Amazon ML Challenge 2024**
+**Amazon ML Challenge 2025**
 
 ---
 
