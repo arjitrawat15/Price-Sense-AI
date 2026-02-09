@@ -275,7 +275,7 @@ Due to GitHub's file size limitations, large data files are **not included** in 
 > **⚠️ IMPORTANT**: The original dataset (train.csv, test.csv) is **proprietary to Amazon** and was provided exclusively to Amazon ML Challenge 2024 participants. Due to licensing restrictions, we cannot publicly redistribute the raw dataset.
 
 #### Option 1: Pre-computed Features (For Competition Participants)
-If you participated in the Amazon ML Challenge 2024 and have access to the original dataset, download the pre-computed features:
+If you participated in the Amazon ML Challenge 2025 and have access to the original dataset, download the pre-computed features:
 - **Google Drive**: [Contact repository owner]
 - **Competition Platform**: Check Amazon ML Challenge resources
 
@@ -283,7 +283,7 @@ If you participated in the Amazon ML Challenge 2024 and have access to the origi
 If you have the original Amazon dataset from the competition:
 
 ```bash
-# 1. Obtain train.csv and test.csv from Amazon ML Challenge 2024
+# 1. Obtain train.csv and test.csv from Amazon ML Challenge 2025
 # 2. Run feature extraction
 python scripts/extract_clip_features.py
 python scripts/extract_text_embeddings.py
@@ -484,6 +484,7 @@ jupyter notebook model.ipynb
 - ✅ **60% improvement** over image-only models
 - ✅ Production-ready latency (<1ms per prediction)
 - ✅ Scalable to millions of products
+- ✅ Ranked 1500 out of 10,000+ teams
 
 ---
 
@@ -628,7 +629,7 @@ SOFTWARE.
 **IMPORTANT**: The dataset (train.csv, test.csv, product images) is **NOT** covered by the MIT License.
 
 - **Dataset Owner**: Amazon.com, Inc.
-- **Usage**: Amazon ML Challenge 2024 participants only
+- **Usage**: Amazon ML Challenge 2025 participants only
 - **Restrictions**: Educational/competition use only - no commercial redistribution
 - **Image Rights**: All product images are property of Amazon and respective brand owners
 
@@ -670,5 +671,6 @@ This project was inspired by the need for more accurate and intelligent pricing 
 **Made with ❤️ for the Amazon ML Challenge 2025**
 
 </div>
+
 
 
