@@ -1,4 +1,4 @@
-# 🎯 PriceVision AI - Multimodal Product Price Intelligence System
+# 🎯 Price-Sense AI - Multimodal Product Price Intelligence System
 
 <div align="center">
 
@@ -508,3 +508,4 @@ This project was inspired by the need for more accurate and intelligent pricing 
 
 
 </div>
+
