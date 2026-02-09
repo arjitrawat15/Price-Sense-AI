@@ -10,7 +10,7 @@
 
 **Advanced Deep Learning System for Product Price Prediction Using Vision-Language Fusion**
 
-*Developed for Amazon ML Challenge 2024*
+*Developed for Amazon ML Challenge 2025*
 
 [Features](#-key-features) • [Architecture](#-system-architecture) • [Installation](#-installation) • [Usage](#-usage) • [Results](#-performance-metrics) • [Documentation](#-documentation)
 
@@ -505,5 +505,6 @@ This project was inspired by the need for more accurate and intelligent pricing 
 [![GitHub Stars](https://img.shields.io/github/stars/yourusername/pricevision-ai?style=social)](https://github.com/yourusername/pricevision-ai)
 [![GitHub Forks](https://img.shields.io/github/forks/yourusername/pricevision-ai?style=social)](https://github.com/yourusername/pricevision-ai/fork)
 [![GitHub Watchers](https://img.shields.io/github/watchers/yourusername/pricevision-ai?style=social)](https://github.com/yourusername/pricevision-ai)
+
 
 </div>
